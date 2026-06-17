@@ -1,0 +1,109 @@
+.seats-page {
+  padding-bottom: 140px;
+  background: var(--bg-primary);
+}
+
+.curved-screen-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+  perspective: 1000px;
+}
+
+.curved-screen {
+  width: 80%;
+  max-width: 600px;
+  height: 60px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-radius: 50% 50% 0 0;
+  position: relative;
+  transform: rotateX(-10deg);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: none;
+  box-shadow: 0 -10px 40px rgba(124, 58, 237, 0.25);
+}
+
+.screen-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(6, 182, 212, 0.2) 0%, transparent 70%);
+  border-radius: 50% 50% 0 0;
+  animation: screenPulse 3s ease-in-out infinite;
+}
+
+@keyframes screenPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.screen-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.seat-map-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  margin: 24px 0;
+  overflow-x: auto;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  justify-content: center;
+}
+
+.booking-summary-card {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg-navbar);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border-color);
+  padding: 24px 48px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  z-index: 100;
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.summary-section {
+  flex: 1;
+}
+
+.booking-summary-card .btn-primary:hover:not(:disabled) {
+  background: var(--accent-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);
+}
+
+.booking-summary-card .btn-primary:disabled {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .seat-map-card { padding: 20px 12px; }
+  .booking-summary-card {
+    padding: 20px 24px;
+    gap: 16px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .booking-summary-card > div { text-align: center !important; }
+  .seats-page { padding-bottom: 280px; }
+  .curved-screen { width: 90%; }
+}

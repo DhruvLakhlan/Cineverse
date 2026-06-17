@@ -1,0 +1,110 @@
+.booking-layout {
+  min-height: 100vh;
+  padding-top: var(--navbar-height);
+  background: var(--bg-primary);
+}
+
+.booking-progress {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  padding: 12px 48px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.booking-progress-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.booking-progress-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.booking-step {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.booking-step-node {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.booking-step-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  transition: all var(--transition);
+}
+
+.booking-step-circle.active {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.booking-step-circle.completed {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: white;
+}
+
+.booking-step-label {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.booking-step-label.active {
+  color: var(--accent-primary);
+}
+
+.booking-step-label.completed {
+  color: var(--text-secondary);
+}
+
+.booking-step-line {
+  flex: 1;
+  height: 2px;
+  background: var(--border-color);
+  margin: 0 4px;
+  margin-bottom: 18px;
+  transition: background var(--transition);
+}
+
+.booking-step-line.completed {
+  background: var(--accent-primary);
+}
+
+.booking-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 48px;
+}
+
+@media (max-width: 768px) {
+  .booking-progress {
+    padding: 10px 16px;
+  }
+
+  .booking-content {
+    padding: 24px 16px;
+  }
+}

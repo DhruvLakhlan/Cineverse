@@ -1,0 +1,116 @@
+.booking-history-page {
+  padding-bottom: 48px;
+  background: var(--bg-primary);
+  min-height: 100vh;
+}
+
+.booking-history-header {
+  margin-bottom: 32px;
+}
+
+.booking-history-header h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 900;
+  color: var(--text-primary);
+}
+
+.booking-history-count {
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+.booking-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.booking-history-card {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  align-items: flex-start;
+}
+
+.booking-history-poster {
+  width: 100px;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.booking-history-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.booking-history-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.booking-history-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.booking-history-venue {
+  font-size: 0.9rem;
+}
+
+.booking-history-status {
+  padding: 8px 20px;
+  border-radius: var(--radius-lg);
+  font-size: 0.8rem;
+  font-weight: 750;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.booking-history-details {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 16px 0;
+}
+
+.booking-history-detail {
+  font-size: 0.9rem;
+}
+
+.booking-history-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.booking-history-amount {
+  font-weight: 850;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+  .booking-history-card {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .booking-history-poster {
+    width: 80px;
+  }
+}
