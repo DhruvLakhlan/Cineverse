@@ -1,16 +1,103 @@
-# React + Vite
+# CineVerse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CineVerse is a modern movie ticket booking web application built using React and Vite. It provides separate interfaces for customers, theatre owners, and administrators, allowing users to browse movies, book tickets, manage theatres, and monitor bookings.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Customer
+- Browse currently available movies
+- View movie details, trailers, cast, and reviews
+- Search and filter movies
+- Select city, theatre, screen, and show timings
+- Choose seats through an interactive seat layout
+- View booking summary and confirmation
+- Access booking history
+- Manage profile and account settings
 
-## React Compiler
+### Theatre Owner
+- Manage theatres and screens
+- Add and update movies
+- Create and manage shows
+- View booking information
+- Monitor theatre performance through dashboard analytics
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Administrator
+- Manage users
+- Review and approve theatre requests
+- View reports and platform statistics
+- Monitor theatres and platform activity
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- React Router
+- Context API
+- CSS3
+- JavaScript
+
+## Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/DhruvLakhlan/Cineverse.git
+```
+
+Move into the project directory
+
+```bash
+cd Cineverse
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
+
+```bash
+npm run dev
+```
+
+Build for production
+
+```bash
+npm run build
+```
+
+Preview the production build
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```text
+src/
+├── components/
+├── context/
+├── data/
+├── layouts/
+├── pages/
+│   ├── admin/
+│   ├── auth/
+│   ├── customer/
+│   └── owner/
+├── routes/
+├── styles/
+└── main.jsx
+```
+
+## Notes
+
+- The application currently uses mock data and browser storage.
+- Authentication and booking information are not persisted in a backend database.
+- The project was developed primarily as a frontend-focused learning project.
+
+## License
+
+This project is intended for educational and portfolio purposes.
